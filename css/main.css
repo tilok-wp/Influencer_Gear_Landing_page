@@ -35,8 +35,39 @@ h1, h2, h3, h4,h5, h6 {
 .flex-container {
     display: flex;
     width: 1170px;
-    /* background-color: thistle; */
 }
+.justify-center {
+    justify-content: center;
+}
+.align-center {
+    align-items: center;
+}
+.width-50 {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.btn-link {
+    padding: 10px 35px;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    display: inline-block;
+    border-radius: 40px;
+    transition: all .3s;
+}
+.btn-link .fa-arrow-right {
+    margin-left: 5px;
+}
+.btn-link:hover {
+    background-color: var(--primary-dark);
+}
+.btn-link:hover .fa-arrow-right {
+    margin-left: 15px;
+}
+
+
 
 
 /* Start header css */
@@ -75,6 +106,28 @@ h1, h2, h3, h4,h5, h6 {
 }
 
 /* End header css */
+/* Start banner css */
+.banner-content {
+    padding: 50px 0;
+}
+.banner-content .heading-primary {
+    font-size: 52px;
+}
+.banner-image {
+    background-image: url(../images/Circle_design.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.banner-image img {
+    transform: scale(.9);
+    transition: transform .3s ease-in;
+}
+.banner-wraper:hover .banner-image img {
+    transform: scale(1);
+}
+/* End banner css */
 
 /* Start footer css */
 .footer {
