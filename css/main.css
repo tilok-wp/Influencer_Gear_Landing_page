@@ -1,13 +1,74 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap');
 
+/*-------------------------
+Basic and utility css
+----------------------------*/
+:root {
+    --primary-color: #E02C6D;
+    --primary-dark: #b81853;
+    --text-color: #3A3A3A;
+  }
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+
 }
 h1, h2, h3, h4,h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     line-height: 1.4;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+.flex-container {
+    display: flex;
+    width: 1170px;
+    /* background-color: thistle; */
+}
+
+
+/* Start header css */
+.logo-text {
+    font-size: 20px;
+}
+.header-wraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.header-menu {
+    display: flex;
+    align-items: center;
+}
+.header-menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.header-menu li {
+    list-style: none;
+    margin-right: 5px;
+    padding: 8px;
+}
+.header-menu li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all .3s ease-in;
+}
+.header-menu li:hover a {
+    color: var(--primary-color);
+    transition: all .3s ease-in;
+}
+
+/* End header css */
