@@ -82,6 +82,7 @@ h1, h2, h3, h4,h5, h6 {
 }
 .heading-primary {
     font-size: 52px;
+    margin-top: 0;
     color: var(--heading-color);
 }
 .heading-secondary {
@@ -89,7 +90,6 @@ h1, h2, h3, h4,h5, h6 {
     color: var(--heading-color);
     margin-top: 0;
 }
-
 
 /* Start header css */
 .mobile_menu_icon {
