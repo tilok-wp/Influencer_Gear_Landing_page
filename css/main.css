@@ -43,10 +43,20 @@ h1, h2, h3, h4,h5, h6 {
 .align-center {
     align-items: center;
 }
+.width-60 {
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
 .width-50 {
     display: flex;
     align-items: center;
     width: 50%;
+}
+.width-40 {
+    display: flex;
+    align-items: center;
+    width: 40%;
 }
 .btn-link {
     padding: 10px 35px;
@@ -68,14 +78,17 @@ h1, h2, h3, h4,h5, h6 {
     margin-left: 15px;
 }
 .section-padding {
-padding: 100px 0;
+    padding: 0 0 120px;
 }
 .heading-primary {
-    font-size: 28px;
+    font-size: 52px;
     color: var(--heading-color);
 }
-
-
+.heading-secondary {
+    font-size: 28px;
+    color: var(--heading-color);
+    margin-top: 0;
+}
 
 
 /* Start header css */
@@ -118,9 +131,7 @@ padding: 100px 0;
 .banner-content {
     padding: 50px 0;
 }
-.banner-content .heading-primary {
-    font-size: 52px;
-}
+
 .banner-image {
     background-image: url(../images/Circle_design.svg);
     background-repeat: no-repeat;
@@ -207,7 +218,67 @@ padding: 100px 0;
 .product-description {
     margin-top: 10px;
 }
+.pd-btn-right {
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+.pd-btn-right .large{
+    font-size: 20px;
+}
 /* End product css */
+/* Start feature section css */
+.feature-content {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.feature-content .btn-link {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 5px;
+}
+/* Start feature section css */
+/* Start blog css */
+.blogs-wraper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr );
+    gap: 2.5em;
+}
+.blog-area .heading-primary {
+    text-align: center;
+}
+.single-blog {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px #aaaaaa5d;
+}
+.blog-image {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.single-blog img {
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    transition: all .06s ease-in;
+}
+.single-blog:hover img {
+    transform: scale(1.2);
+}
+.btn-link.text {
+    background-color: transparent;
+    color: var(--primary-dark);
+    font-weight: 700;
+    padding-left: 0;
+}
+.btn-link.text:hover {
+    background-color: transparent;
+    color: var(--primary-light);
+    font-weight: 700;
+    padding-left: 0;
+}
+
+/* End blog css */
 
 /* Start footer css */
 .footer {
@@ -246,3 +317,43 @@ padding: 100px 0;
 }
 
 /* End footer css */
+
+/* --------------------------
+Responsive CSS
+------------------------------*/
+@media (max-width: 1024px) {
+    .flex-container, .feature-wraper, .feature-content  {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 15px;
+    }
+    .client .flex-container {
+        flex-direction: row;
+    }
+    .client .flex-container .single-logo {
+        margin: 5px;
+    }
+    .feature-wraper .width-60, .feature-wraper .width-40 {
+        width: 100%;
+        padding: 0 15px;
+        justify-content: center;
+    }
+    .products-wraper, .blogs-wraper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+@media (max-width: 767px) {
+    .banner-wraper .width-50:last-child {
+        order: -1;
+        margin-top: 50px;
+    }
+    .products-wraper, .blogs-wraper {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-wraper .width-50 {
+        width: 100%;
+    }
+
+  }
